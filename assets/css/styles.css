@@ -535,6 +535,38 @@ h4 {
   object-fit: contain;
 }
 
+.skill-logo-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  height: 48px;
+}
+
+.skill-logo-stack img + img {
+  margin-left: -15px;
+}
+
+.skill-logo-stack img {
+  width: 38px;
+  height: 38px;
+}
+
+.skill-logo-stack img:nth-child(1) {
+  transform: rotate(-7deg) translateY(5px);
+  z-index: 3;
+}
+
+.skill-logo-stack img:nth-child(2) {
+  transform: rotate(5deg) translateY(-1px);
+  z-index: 2;
+}
+
+.skill-logo-stack img:nth-child(3) {
+  transform: rotate(-3deg) translateY(-8px);
+  z-index: 1;
+}
+
 .skill-bubble p {
   margin: 0;
   font-size: 0.78rem;
@@ -1322,6 +1354,10 @@ h2 {
 
 .skill-bubble img {
   filter: grayscale(1) contrast(1.25);
+}
+
+.skill-bubble img.skill-logo-arch {
+  filter: none;
 }
 
 .social-section {
