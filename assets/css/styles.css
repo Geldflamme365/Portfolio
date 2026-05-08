@@ -452,6 +452,7 @@ h4 {
 }
 
 .project-video {
+  margin: 0;
   overflow: hidden;
   border-radius: 14px;
   background: #000;
