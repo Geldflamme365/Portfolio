@@ -1,0 +1,281 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tim Ackeret - Portfolio</title>
+  <meta
+    name="description"
+    content="Modernes Portfolio von Tim Ackeret mit Projekten, Erfahrung, Arbeitsweise und Kontakt."
+  />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Zur Startsektion">Tim Ackeret</a>
+    <nav class="site-nav" aria-label="Portfolio Navigation">
+      <a href="#about">Profil</a>
+      <a href="#projects">Projekte</a>
+      <a href="#experience">Erfahrung</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero-section section-dark">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="section-mark">Portfolio / 2026</p>
+          <h1>Ich mag klare Spuren, im Schnee und im Code.</h1>
+          <p class="hero-lead">
+            Informatiker Applikationsentwickler in Ausbildung an der IMS Aarau.
+            Fokus auf Webentwicklung, APIs, Automatisierung und Interfaces, die
+            nicht beliebig wirken.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#projects">Projekte ansehen</a>
+            <a class="button button-ghost" href="#contact">Kontakt aufnehmen</a>
+          </div>
+        </div>
+
+        <figure class="intro-visual reveal">
+          <img src="assets/images/intro-workspace.jpeg" alt="Arbeitsplatz mit Code und Portfolio-Notizen" />
+        </figure>
+      </div>
+    </section>
+
+    <div class="wave wave-white" aria-hidden="true">
+      <svg viewBox="0 0 1440 130" preserveAspectRatio="none">
+        <path d="M0,92 C170,18 310,18 480,88 C650,158 790,154 960,80 C1130,6 1280,14 1440,70 L1440,130 L0,130 Z"></path>
+      </svg>
+    </div>
+
+    <section id="about" class="page-section section-light">
+      <div class="section-heading reveal">
+        <p class="section-mark">Profil</p>
+        <h2>Technisch sauber, visuell bewusst.</h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text reveal">
+          <p>
+            Ich bin Tim und mache aktuell die Ausbildung an der IMS Aarau. Mich
+            interessiert Software, die nicht nur läuft, sondern nachvollziehbar
+            aufgebaut ist. Am liebsten arbeite ich an kleinen, echten Tools:
+            mit Daten, APIs, klarer Struktur und einem Interface, das den Nutzer
+            ernst nimmt.
+          </p>
+        </div>
+
+        <div class="principles reveal">
+          <article>
+            <span>01</span>
+            <h3>Keine unnötige Komplexität</h3>
+            <p>Ich bevorzuge Lösungen, die man erklären, warten und weiterbauen kann.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Gute Oberfläche, klare Logik</h3>
+            <p>Frontend ist für mich Gestaltung und Struktur gleichzeitig.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Lernen durch Projekte</h3>
+            <p>Ich baue lieber konkret, teste früh und verbessere sichtbar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wave wave-black" aria-hidden="true">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path d="M0,52 C160,120 320,132 500,72 C680,12 850,2 1040,70 C1230,138 1340,118 1440,76 L1440,150 L0,150 Z"></path>
+      </svg>
+    </div>
+
+    <section id="projects" class="page-section section-dark">
+      <div class="section-heading reveal">
+        <p class="section-mark">Projekte</p>
+        <h2>Arbeiten, die etwas zeigen.</h2>
+      </div>
+
+      <article class="project-feature project-feature-video reveal">
+        <figure class="project-video">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/videos/ki-inventory-demo.mp4" type="video/mp4" />
+          </video>
+        </figure>
+        <div class="project-copy">
+          <p class="project-number">001</p>
+          <h3>Logistik trifft KI</h3>
+          <p>
+            Dieses Projekt haben wir im Rahmen des Baden Hackt Hackathon 2026
+            erstellt: eine Software, die mit einem eigenen KI-Modell Gegenstände
+            erkennt, Bestände überwacht und bei zu wenigen Artikeln automatisch
+            eine Nachbestellung per Mail vorbereitet.
+          </p>
+          <ul class="tag-list" aria-label="Technologien">
+            <li>KI-Modell</li>
+            <li>Objekterkennung</li>
+            <li>Automatisierung</li>
+            <li>E-Mail Workflow</li>
+          </ul>
+          <div class="link-row">
+            <a class="button button-ghost" href="https://github.com/ahmojo/Badenhackt_KMU_Trifft_KI" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-strip reveal">
+        <div>
+          <p class="project-number">002</p>
+          <h3>MTG Remasurium</h3>
+          <p>
+            Ein Magic: The Gathering-Kartenfinder mit Scryfall API, Oracle-Text,
+            Versionshistorie und lokaler Collection. Das Projekt verbindet
+            Kartendaten, Suchlogik und ein bewusst reduziertes Interface.
+          </p>
+          <ul class="tag-list" aria-label="Technologien">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Scryfall API</li>
+          </ul>
+          <div class="link-row">
+            <a class="button button-light" href="projects/remasurium/index.html" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a class="button button-ghost" href="https://github.com/Geldflamme365/MTG-Remasurium" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <figure>
+          <img class="image-focus-center" src="assets/images/remasurium-search.png" alt="Remasurium Suchansicht" loading="lazy" />
+        </figure>
+      </article>
+
+      <article class="project-strip project-strip-text reveal">
+        <div>
+          <p class="project-number">003</p>
+          <h3>Dateistruktur Optimierung</h3>
+          <p>
+            Ein PowerShell-Skript, das Dateien anhand ihres Namens erkennt und
+            in eine sauberere Struktur einsortiert. Kleiner Umfang, klarer Nutzen.
+          </p>
+          <ul class="tag-list" aria-label="Technologien">
+            <li>PowerShell</li>
+            <li>Automatisierung</li>
+            <li>Dateiorganisation</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <div class="wave wave-white wave-invert" aria-hidden="true">
+      <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+        <path d="M0,58 C210,138 370,122 560,52 C750,-18 940,4 1110,70 C1280,136 1360,116 1440,84 L1440,140 L0,140 Z"></path>
+      </svg>
+    </div>
+
+    <section id="experience" class="page-section section-light">
+      <div class="section-heading reveal">
+        <p class="section-mark">Erfahrung</p>
+        <h2>Ausbildung und Praxis</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span>laufend</span>
+          <h3>Schul- und Side-Projects</h3>
+          <p>Kleine Webapps, Automatisierungsskripte und Experimente mit APIs, um Unterricht praktisch zu vertiefen.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span>2025 - Heute</span>
+          <h3>Praktikant in Logistik</h3>
+          <p>Ferienjobs bei Unifil AG, Niederlenz</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span>2024 - heute</span>
+          <h3>IMS Aarau</h3>
+          <p>Ausbildung mit Schwerpunkt auf Applikationsentwicklung, Datenbanken und Webtechnologien.</p>
+        </article>
+      </div>
+
+      <section class="skill-field reveal" aria-labelledby="skillFieldTitle">
+        <div class="skill-field-head">
+          <h3 id="skillFieldTitle">Skills</h3>
+        </div>
+
+        <div class="skill-bubbles" aria-label="Skills mit Projektbezug">
+          <article class="skill-bubble">
+            <img src="assets/skills/html5.svg" alt="" aria-hidden="true" />
+            <div><h4>HTML</h4><p>Semantische Struktur für Portfolio und App-Oberflächen.</p></div>
+          </article>
+          <article class="skill-bubble">
+            <img src="assets/skills/css.svg" alt="" aria-hidden="true" />
+            <div><h4>CSS</h4><p>Responsive Layouts, klare Kontraste und eigene UI-Systeme.</p></div>
+          </article>
+          <article class="skill-bubble">
+            <img src="assets/skills/javascript.svg" alt="" aria-hidden="true" />
+            <div><h4>JavaScript</h4><p>Suchlogik, UI-Zustände, Kamera-Frontend und API-Calls.</p></div>
+          </article>
+          <article class="skill-bubble">
+            <img src="assets/skills/python.svg" alt="" aria-hidden="true" />
+            <div><h4>Python</h4><p>Backend, Trainingsskripte und Logik für KI-gestützte Abläufe.</p></div>
+          </article>
+          <article class="skill-bubble">
+            <img src="assets/skills/ultralytics.svg" alt="" aria-hidden="true" />
+            <div><h4>YOLO</h4><p>Objekterkennung und Klassifikation mit eigenem Modell.</p></div>
+          </article>
+          <article class="skill-bubble">
+            <img src="assets/skills/csharp.svg" alt="" aria-hidden="true" />
+            <div><h4>C#</h4><p>Backend-Logik, API-Anbindung und strukturierte Anwendungen.</p></div>
+          </article>
+          <article class="skill-bubble">
+            <img src="assets/skills/api.svg" alt="" aria-hidden="true" />
+            <div><h4>APIs</h4><p>Scryfall, eigene Backend-Endpunkte und ERP/Webhook-Anbindung.</p></div>
+          </article>
+          <article class="skill-bubble">
+            <img src="assets/skills/powershell.svg" alt="" aria-hidden="true" />
+            <div><h4>PowerShell</h4><p>Dateien sortieren und kleine wiederholbare Aufgaben automatisieren.</p></div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <div class="wave wave-black" aria-hidden="true">
+      <svg viewBox="0 0 1440 130" preserveAspectRatio="none">
+        <path d="M0,80 C190,0 360,22 520,88 C680,154 820,138 990,58 C1160,-22 1320,18 1440,70 L1440,130 L0,130 Z"></path>
+      </svg>
+    </div>
+
+    <section id="contact" class="page-section social-section section-dark">
+      <div class="social-wrap reveal">
+        <h2 class="social-title">Socials</h2>
+        <div class="social-links" aria-label="Kontaktkanäle">
+          <a class="social-link" href="mailto:tim@ackeret.org" aria-label="E-Mail an Tim Ackeret senden">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 6.75A2.75 2.75 0 0 1 4.75 4h14.5A2.75 2.75 0 0 1 22 6.75v10.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25V6.75zm2.6-.25L12 11.35 19.4 6.5H4.6zm14.9 2.03-6.76 4.43a1.25 1.25 0 0 1-1.48 0L4.5 8.53v8.72c0 .14.11.25.25.25h14.5c.14 0 .25-.11.25-.25V8.53z"/>
+            </svg>
+            <span>E-Mail</span>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/tim-ackeret-74ba5b3b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Tim Ackeret">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 8.5a1.81 1.81 0 1 1 0-3.63 1.81 1.81 0 0 1 0 3.63zM5.38 9.75h3.12V19H5.38V9.75zm5.06 0h2.99v1.27h.04c.42-.79 1.44-1.62 2.96-1.62 3.16 0 3.75 2.08 3.75 4.79V19h-3.12v-4.27c0-1.02-.02-2.34-1.42-2.34-1.43 0-1.65 1.12-1.65 2.27V19h-3.12V9.75z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="social-link" href="https://github.com/Geldflamme365/" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von Tim Ackeret">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .75a11.25 11.25 0 0 0-3.56 21.93c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.27-1.23-1.6-1.23-1.6-1-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.98 1.68 2.57 1.2 3.2.91.1-.71.39-1.2.7-1.48-2.48-.28-5.1-1.24-5.1-5.53 0-1.22.43-2.21 1.14-2.99-.11-.28-.49-1.43.11-2.98 0 0 .93-.3 3.04 1.14a10.5 10.5 0 0 1 5.54 0c2.1-1.44 3.03-1.14 3.03-1.14.6 1.55.22 2.7.11 2.98.71.78 1.14 1.77 1.14 2.99 0 4.3-2.62 5.25-5.12 5.53.4.35.76 1.02.76 2.06v3.05c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

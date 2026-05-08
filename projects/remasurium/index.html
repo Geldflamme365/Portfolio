@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MTG Remasurium</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="desk">
+    <header class="window browser-shell">
+      <div class="title-bar">
+        <span>remasurium.exe - [scryfall browser shell]</span>
+        <div class="title-controls" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <nav class="menu-bar" aria-label="Remasurium Navigation">
+        <a class="nav-link" href="#/home">Home</a>
+        <a class="nav-link" href="#/suche">Suche</a>
+        <a class="nav-link" href="#/collection">Collection</a>
+      </nav>
+
+      <div class="address-row">
+        <span class="address-label">Location:</span>
+        <div class="address-field" id="routeAddress">scry://remasurium/home</div>
+        <button type="button" class="small-toolbar-button" data-random-card="1">Random</button>
+      </div>
+    </header>
+
+    <section id="view-home" class="view">
+      <div class="home-grid">
+        <article class="window panel hero-panel">
+          <div class="panel-title-bar">
+            <span>start page</span>
+          </div>
+          <div class="panel-body">
+            <p class="eyebrow">retro look / modern search</p>
+            <h1>MTG Remasurium</h1>
+            <p class="lead">
+              Ein reduzierter Old-School-Cardfinder für Magic: The Gathering.
+              Suche Karten, lies Oracle-Text, springe durch Prints und speichere Karten lokal.
+            </p>
+
+            <div class="button-row">
+              <a class="button-link primary" href="#/suche">Open Search</a>
+              <a class="button-link" href="#/collection">Open Collection</a>
+              <button type="button" class="retro-button" data-random-card="1">Random Card</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="window panel">
+          <div class="panel-title-bar">
+            <span>quick start</span>
+          </div>
+          <div class="panel-body">
+            <div class="info-list">
+              <div class="info-row">
+                <span>Search</span>
+                <strong>Name oder Scryfall Query</strong>
+              </div>
+              <div class="info-row">
+                <span>Details</span>
+                <strong>Oracle Text + Print History</strong>
+              </div>
+              <div class="info-row">
+                <span>Storage</span>
+                <strong>Local browser collection</strong>
+              </div>
+            </div>
+
+            <div class="query-bank">
+              <button type="button" class="query-pill" data-query="lightning bolt" data-autorun="true">lightning bolt</button>
+              <button type="button" class="query-pill" data-query="c:u t:creature" data-autorun="true">c:u t:creature</button>
+              <button type="button" class="query-pill" data-query="o:&quot;draw a card&quot;" data-autorun="true">o:"draw a card"</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="home-grid home-grid-secondary">
+        <article class="window panel">
+          <div class="panel-title-bar">
+            <span>what it does</span>
+          </div>
+          <div class="panel-body">
+            <div class="feature-grid">
+              <article class="mini-panel">
+                <h2>Kartensuche</h2>
+                <p>Direkte Suche über Scryfall, inklusive toleranter Suche bei kleinen Tippfehlern.</p>
+              </article>
+              <article class="mini-panel">
+                <h2>Oracle Text</h2>
+                <p>Öffnet den offiziellen Regeltext einer Karte in einer lesbaren Detailansicht.</p>
+              </article>
+              <article class="mini-panel">
+                <h2>Print History</h2>
+                <p>Wechsle durch frühere Versionen und Sets derselben Karte.</p>
+              </article>
+              <article class="mini-panel">
+                <h2>Collection</h2>
+                <p>Speichere Karten lokal im Browser und rufe sie später wieder auf.</p>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <article class="window panel">
+          <div class="panel-title-bar">
+            <span>syntax notes</span>
+          </div>
+          <div class="panel-body">
+            <div class="syntax-list">
+              <code>c:u t:creature</code>
+              <code>mv&lt;=3 t:instant</code>
+              <code>o:&quot;draw a card&quot;</code>
+              <code>set:neo type:artifact</code>
+            </div>
+            <p class="small-note">
+              Oracle Text ist der aktuelle offizielle Regeltext einer Karte. Gerade bei älteren Prints ist das oft hilfreicher als nur das Bild.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-suche" class="view">
+      <div class="search-layout">
+        <article class="window panel console-panel">
+          <div class="panel-title-bar">
+            <span>search console</span>
+          </div>
+          <div class="panel-body">
+            <label class="field-label" for="searchInput">Card name / Scryfall query</label>
+            <div class="search-row">
+              <input id="searchInput" type="text" placeholder="z.B. lightning bolt" autocomplete="off" />
+              <button id="searchBtn" type="button">Suchen</button>
+            </div>
+
+            <div class="status-wrap">
+              <span class="field-label">Status</span>
+              <div id="status" class="status muted">Bereit. Gib einen Suchbegriff ein.</div>
+            </div>
+
+            <div class="query-bank">
+              <button type="button" class="query-pill" data-query="counterspell" data-autorun="true">counterspell</button>
+              <button type="button" class="query-pill" data-query="type:legendary dragon" data-autorun="true">legendary dragon</button>
+              <button type="button" class="query-pill" data-query="o:&quot;destroy target creature&quot;" data-autorun="true">destroy target creature</button>
+            </div>
+
+            <div class="tip-box">
+              <h2>Tip</h2>
+              <p>Normale Namen werden tolerant gesucht. Wenn du Scryfall-Syntax nutzt, bleibt die Suche exakt.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="window panel results-panel">
+          <div class="panel-title-bar panel-title-bar-wide">
+            <span>search results</span>
+            <strong data-results-count>0 cards</strong>
+          </div>
+          <div class="panel-body">
+            <div id="results" class="results"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-collection" class="view">
+      <div class="search-layout">
+        <article class="window panel console-panel">
+          <div class="panel-title-bar">
+            <span>collection memory</span>
+          </div>
+          <div class="panel-body">
+            <div class="stat-box">
+              <strong data-collection-count>0</strong>
+              <span>cards saved locally in your browser</span>
+            </div>
+
+            <p class="small-note">
+              Gespeicherte Karten werden mit <code>localStorage</code> behalten. Klick auf eine Karte, um sie wieder zu laden.
+            </p>
+
+            <div class="button-row">
+              <a class="button-link primary" href="#/suche">Mehr Karten suchen</a>
+              <button type="button" class="retro-button" data-random-card="1">Random Card</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="window panel results-panel">
+          <div class="panel-title-bar panel-title-bar-wide">
+            <span>saved cards</span>
+            <strong data-collection-count>0</strong>
+          </div>
+          <div class="panel-body">
+            <div id="collection" class="collection-list"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="window status-bar">
+      <span>MTG Remasurium / local mode</span>
+      <span id="routeFooter">scry://remasurium/home</span>
+    </footer>
+  </main>
+
+  <div id="searchModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog window" role="dialog" aria-modal="true" aria-label="Kartendetails">
+      <div class="title-bar">
+        <span>card details</span>
+        <button id="modalCloseBtn" class="modal-close" type="button" aria-label="Schließen">X</button>
+      </div>
+      <div id="searchDetails" class="modal-body muted">Noch keine Karte ausgewählt.</div>
+    </div>
+  </div>
+
+  <div id="collectionModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog window" role="dialog" aria-modal="true" aria-label="Collection-Kartendetails">
+      <div class="title-bar">
+        <span>collection details</span>
+        <button id="collectionModalCloseBtn" class="modal-close" type="button" aria-label="Schließen">X</button>
+      </div>
+      <div id="collectionDetails" class="modal-body muted">Noch keine Karte aus der Collection geöffnet.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
