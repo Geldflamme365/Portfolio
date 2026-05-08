@@ -510,7 +510,7 @@ h4 {
 
 .skill-bubbles {
   display: grid;
-  grid-template-columns: repeat(4, minmax(116px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   align-items: center;
 }
@@ -520,9 +520,11 @@ h4 {
   gap: 8px;
   place-items: center;
   aspect-ratio: 1;
+  min-width: 0;
+  overflow: hidden;
   border: 1px solid var(--black);
   border-radius: 18px;
-  padding: 16px;
+  padding: clamp(0.75rem, 6%, 1rem);
   color: var(--black);
   background: rgba(255, 255, 255, 0.32);
   text-align: center;
@@ -530,40 +532,41 @@ h4 {
 }
 
 .skill-bubble img {
-  width: 34px;
-  height: 34px;
+  width: clamp(1.85rem, 22%, 2.15rem);
+  height: auto;
+  aspect-ratio: 1;
   object-fit: contain;
 }
 
 .skill-logo-stack {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 82px;
-  height: 48px;
-}
-
-.skill-logo-stack img + img {
-  margin-left: -15px;
+  position: relative;
+  width: clamp(4rem, 52%, 5.4rem);
+  max-width: 100%;
+  aspect-ratio: 2.05 / 1;
+  isolation: isolate;
 }
 
 .skill-logo-stack img {
-  width: 38px;
-  height: 38px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45%;
+  height: auto;
+  max-height: none;
 }
 
 .skill-logo-stack img:nth-child(1) {
-  transform: rotate(-7deg) translateY(5px);
+  transform: translate(-88%, -36%) rotate(-8deg);
   z-index: 3;
 }
 
 .skill-logo-stack img:nth-child(2) {
-  transform: rotate(5deg) translateY(-1px);
+  transform: translate(-50%, -52%) rotate(5deg);
   z-index: 2;
 }
 
 .skill-logo-stack img:nth-child(3) {
-  transform: rotate(-3deg) translateY(-8px);
+  transform: translate(-12%, -70%) rotate(-4deg);
   z-index: 1;
 }
 
@@ -1454,6 +1457,10 @@ h2 {
   h2 {
     font-size: 2.8rem;
   }
+
+  .skill-bubbles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 620px) {
@@ -1489,6 +1496,21 @@ h2 {
     font-size: 2.1rem;
   }
 
+  .skill-bubbles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .skill-bubble {
+    aspect-ratio: auto;
+    min-height: clamp(10rem, 47vw, 12rem);
+    padding: clamp(0.7rem, 4vw, 0.95rem);
+  }
+
+  .skill-bubble p {
+    font-size: clamp(0.7rem, 3.2vw, 0.78rem);
+  }
+
   .skill-field-head h3,
   .social-title {
     font-size: 4.15rem;
@@ -1522,5 +1544,16 @@ h2 {
   .wave-black::after {
     background-image:
       linear-gradient(90deg, var(--black) 0 24px, transparent 24px 48px, var(--black) 48px 72px, transparent 72px 96px);
+  }
+}
+
+@media (max-width: 380px) {
+  .skill-bubbles {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-bubble {
+    min-height: auto;
+    aspect-ratio: 1.08 / 1;
   }
 }
