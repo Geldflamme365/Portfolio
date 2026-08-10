@@ -451,6 +451,13 @@ h4 {
   object-position: 50% 50%;
 }
 
+.project-shot img.image-portrait,
+.project-strip img.image-portrait {
+  aspect-ratio: 3 / 4;
+  max-height: 620px;
+  object-fit: contain;
+}
+
 .project-video {
   margin: 0;
   overflow: hidden;
