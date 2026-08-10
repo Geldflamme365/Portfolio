@@ -453,7 +453,7 @@ h4 {
 
 .project-shot img.image-portrait,
 .project-strip img.image-portrait {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   max-height: 620px;
   object-fit: contain;
 }
