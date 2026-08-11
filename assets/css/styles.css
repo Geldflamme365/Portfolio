@@ -451,6 +451,13 @@ h4 {
   object-position: 50% 50%;
 }
 
+/* Fuer Screenshots: lieber schmale Raender als abgeschnittene
+   Beschriftungen. Der Hintergrund ist ohnehin schwarz. */
+.project-shot img.image-contain,
+.project-strip img.image-contain {
+  object-fit: contain;
+}
+
 .project-shot img.image-portrait,
 .project-strip img.image-portrait {
   aspect-ratio: 4 / 5;
