@@ -1457,10 +1457,14 @@ h2 {
     padding-top: 156px;
   }
 
+  /* Muss auch hier stehen: die spätere .hero-grid-Regel kommt in der
+     Datei nach der früheren Media Query und gewinnt sonst, weil Media
+     Queries die Spezifität nicht erhöhen. */
   .hero-grid,
   .about-layout,
   .project-feature,
   .project-strip {
+    grid-template-columns: minmax(0, 1fr);
     gap: 16px;
   }
 
@@ -1489,6 +1493,17 @@ h2 {
   .site-nav {
     overflow-x: auto;
     flex-wrap: nowrap;
+  }
+
+  /* Fingerfreundliche Ziele. Die Empfehlung liegt bei 44 Pixeln, die
+     Navigation lag bei 29. */
+  .site-nav a,
+  .brand,
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
   }
 
   .hero-section {
@@ -1525,9 +1540,12 @@ h2 {
     font-size: clamp(0.7rem, 3.2vw, 0.78rem);
   }
 
+  /* Einzelne Wörter wie SOCIALS lassen sich nicht umbrechen. Bei fester
+     Grösse schieben sie auf schmalen Geräten die ganze Seite breiter,
+     darum waechst die Schrift hier mit der Fensterbreite mit. */
   .skill-field-head h3,
   .social-title {
-    font-size: 4.15rem;
+    font-size: clamp(2.2rem, 13vw, 4.15rem);
   }
 
   .social-links {
