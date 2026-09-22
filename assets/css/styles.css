@@ -1164,6 +1164,15 @@ h2 {
   filter: grayscale(0.18) contrast(1.08);
 }
 
+.intro-visual figcaption {
+  margin-top: 8px;
+  padding: 0 2px;
+  color: var(--black);
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 .wave {
   position: relative;
   height: 72px;
