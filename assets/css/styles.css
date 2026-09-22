@@ -1468,6 +1468,14 @@ h2 {
     gap: 16px;
   }
 
+  /* Derselbe Fall bei .principles article: die spätere, nicht in eine
+     Abfrage eingebundene Regel bei Zeile 1255 setzt sonst wieder drei
+     feste Spalten und quetscht Nummer, Titel und Text ineinander. */
+  .principles article {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
   h1 {
     font-size: 3.65rem;
   }
